@@ -1,0 +1,17 @@
+SFX:
+	FPS:
+		Change Weapon - 拳銃をチャッと構える
+		Shots (Pistol, Shotgun, Rifle, SMG)
+			- 拳銃を撃つ
+			- ショットガン発射
+			- 狙撃銃発射
+			- サブマシンガン発射1
+		No ammo - 拳銃の弾切れ
+		Reloading - 弾倉に弾を込める
+		Enemy Attack - スライムの攻撃
+	Match 3:
+		Swap pieces - 決定ボタンを押す31 - https://soundeffect-lab.info/sound/button/
+		Match - 決定ボタンを押す4 - https://soundeffect-lab.info/sound/button/
+
+Credits:
+	Pallete https://lospec.com/palette-list/bastille-8

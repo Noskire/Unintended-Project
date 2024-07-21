@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=3 uid="uid://ga436q6nlk2r"]
+
+[ext_resource type="Script" path="res://src/menu.gd" id="1_sj3cv"]
+[ext_resource type="AudioStream" uid="uid://chlxm6oa7joye" path="res://assets/music/sfxs/スライムの攻撃.mp3" id="2_n43o7"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sj3cv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.054902, 0.054902, 0.054902, 1)
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -150.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Match FPS 2D"
+horizontal_alignment = 1
+
+[node name="Empty" type="Label" parent="VBox"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Play"
+
+[node name="HBox" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "Volume"
+
+[node name="HBox" type="HBoxContainer" parent="VBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="VBox/HBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+value = 0.8
+
+[node name="Vle" type="Label" parent="VBox/HBox/HBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "80"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_n43o7")
+bus = &"SFX"
+
+[connection signal="button_up" from="VBox/Play" to="." method="_on_play_button_up"]
+[connection signal="value_changed" from="VBox/HBox/HBox/HSlider" to="." method="_on_h_slider_value_changed"]
