@@ -203,7 +203,7 @@ offset_top = 120.0
 offset_right = 730.0
 offset_bottom = 208.0
 theme_override_font_sizes/font_size = 64
-text = "Match FPS 2D"
+text = "Match FPS"
 horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

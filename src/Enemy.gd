@@ -66,9 +66,9 @@ func _process(delta):
 				cooldown = idle_cd_time
 
 func hit(hit_pos, hit_damage):
-	anim.play("Hit")
 	if hit_pos.x >= position.x - size.x and hit_pos.x <= position.x + size.x:
 		if hit_pos.y >= position.y - size.y and hit_pos.y <= position.y + size.y:
+			anim.play("Hit")
 			hp -= hit_damage
 			if hp <= 0:
 				queue_free()

@@ -842,15 +842,10 @@ script = ExtResource("24_2r6dc")
 
 [node name="HBox" type="HBoxContainer" parent="Control"]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
 offset_left = 25.0
-offset_top = -64.0
-offset_right = -25.0
-grow_horizontal = 2
-grow_vertical = 0
+offset_top = 422.0
+offset_right = 887.0
+offset_bottom = 486.0
 theme_override_constants/separation = 15
 
 [node name="T1" type="TextureRect" parent="Control/HBox"]

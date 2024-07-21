@@ -6,6 +6,7 @@ extends Control
 var game_path = "res://src/player_view.tscn"
 
 func _ready():
+	get_tree().paused = false
 	AudioServer.set_bus_volume_db(0, linear_to_db(0.8))
 
 func _on_play_button_up():

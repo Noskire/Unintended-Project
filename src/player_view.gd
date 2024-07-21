@@ -68,6 +68,7 @@ var menu_path = "res://src/menu.tscn"
 func _ready():
 	draw_view()
 	update_weapon()
+	get_tree().paused = false
 
 func _process(delta):
 	if FPS_mode:
@@ -488,8 +489,9 @@ func hit(damage):
 		hp -= 1
 	
 	if hp <= 0:
-		anim.play("GameOver")
 		get_tree().paused = true
+		await get_tree().create_timer(dur).timeout
+		anim.play("GameOver")
 
 func _on_button_up():
 	get_tree().change_scene_to_file(menu_path)
